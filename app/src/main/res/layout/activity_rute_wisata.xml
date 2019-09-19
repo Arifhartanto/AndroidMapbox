@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RuteWisata">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        mapbox:mapbox_cameraTargetLat="38.9098"
+        mapbox:mapbox_cameraTargetLng="-77.0295"
+        mapbox:mapbox_cameraZoom="12"
+        mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10">
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="373dp"
+        android:layout_height="51dp"
+        android:layout_alignEnd="@+id/mapView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="0dp"
+        android:enabled="false"
+        android:text="@string/start_navigating"
+        android:textColor="@color/mapboxGrayLight"
+        mapbox:layout_constraintBottom_toBottomOf="@+id/mapView"
+        mapbox:layout_constraintEnd_toEndOf="@+id/mapView"
+        mapbox:layout_constraintStart_toStartOf="@+id/mapView" />
+
+</RelativeLayout>
